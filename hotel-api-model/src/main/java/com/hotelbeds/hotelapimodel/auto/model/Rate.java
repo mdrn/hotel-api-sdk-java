@@ -79,7 +79,7 @@ public class Rate extends BasicRate {
     @XmlAttribute
     private String boardName;
     @XmlElementWrapper(name = "cancellationPolicies")
-    @XmlElement(name = "cancellationPolicy")
+    @XmlElement(name = "cancellationPolicies")
     @JsonProperty("cancellationPolicies")
     private List<CancellationPolicy> cancellationPolicies;
     @XmlElement(name = "taxes")
