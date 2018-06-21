@@ -80,6 +80,7 @@ public class Rate extends BasicRate {
     private String boardName;
     @XmlElementWrapper(name = "cancellationPolicies")
     @XmlElement(name = "cancellationPolicy")
+    @JsonProperty("cancellationPolicies")
     private List<CancellationPolicy> cancellationPolicies;
     @XmlElement(name = "taxes")
     private Taxes taxes;
@@ -107,7 +108,7 @@ public class Rate extends BasicRate {
     @JsonSerialize(using = RateSerializer.class)
     private BigDecimal rateup;
     @XmlElementWrapper(name = "dailyRates")
-    @XmlElement(name = "dailyRate")
+    @XmlElement(name = "dailyRates")
     @JsonProperty("dailyRates")
     private List<DailyRate> dailyRates;
 
