@@ -805,7 +805,7 @@ public final class SimpleTypes {
      */
     public enum Accommodation {
         HOTEL("HOTEL"),
-        APARTMENT("APART"),
+        APARTMENT("APARTMENT"),
         RURAL("RURAL"),
         HOSTEL("HOSTEL"),
         APTHOTEL("APTHOTEL"),
