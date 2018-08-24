@@ -54,7 +54,7 @@ import com.hotelbeds.hotelapimodel.auto.common.SimpleTypes.YesNo;
 /**
  * The Class AssignUtils.
  *
- * @author
+ * @author vmavromatis
  */
 public final class AssignUtils {
 
@@ -468,8 +468,8 @@ public final class AssignUtils {
     /**
      * Safe short with BigDecimal
      *
-     * @param number
-     * @return
+     * @param number the number
+     * @return the short
      */
     public static Short safeShort(final BigDecimal number) {
         Short result = null;
