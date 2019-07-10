@@ -94,6 +94,8 @@ public class Booking {
         //
         bookingRQ.setHolder(holder);
         //
+        bookingRQ.setTolerance(tolerance);
+        //
         bookingRQ.setClientReference(clientReference);
         //
         bookingRQ.setRemark(remark);
