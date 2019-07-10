@@ -34,6 +34,8 @@ import com.hotelbeds.hotelapimodel.auto.model.BookingRoom;
 import com.hotelbeds.hotelapimodel.auto.model.Holder;
 import com.hotelbeds.hotelapimodel.auto.model.PaymentData;
 import com.hotelbeds.hotelapimodel.auto.model.Voucher;
+
+import java.math.BigDecimal;
 import java.util.List;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -78,6 +80,7 @@ public class BookingRQ extends AbstractGenericRequest {
     private String remark;
     private Voucher voucher;
     private Integer platform;
+    private BigDecimal tolerance;
 
 
 }
