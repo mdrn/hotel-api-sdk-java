@@ -102,6 +102,8 @@ public class Booking extends BookingRS {
     private BigDecimal pendingAmount;
     @XmlAttribute
     private String currency;
+    @XmlAttribute
+    private BigDecimal tolerance;
 
 
 }
