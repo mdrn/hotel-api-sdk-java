@@ -222,7 +222,7 @@ public class HotelAPIClientDemo {
                             }
                             log.info("Confirming reservation with rate {}", rateKey);
                             BookingBuilder bookingBuilder =
-                                Booking.builder().withHolder("Rosetta", "Pruebas").clientReference("SDK Test").remark("***SDK***TESTING")
+                                Booking.builder().withHolder("Rosetta", "Pruebas").clientReference("SDK Test").remark("***SDK***TESTING").tolerance("5.00")
                                     .addRoom(rateKey, confirmRoom).withVoucher("ENG", "xxxxx@xxxxxxx.com", "xxxxx@xxxxxxx.com", "Test", "Test");
                             //                            bookingBuilder.cardHolderName("AUTHORISED").cardNumber("4444333322221111").cardCVC("597").cardType("VI")
                             //                                    .expiryDate("0718").email("xxxxx@xxxxxx.com").phoneNumber("666666666");
