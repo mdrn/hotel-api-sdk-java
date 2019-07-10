@@ -22,6 +22,7 @@ package com.hotelbeds.demo;
  * #L%
  */
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
@@ -56,7 +57,7 @@ public class HotelAPIClientDemo {
             boolean doCheckStatus = true;
             boolean doAvailability = true;
             boolean isRandom = true;
-            boolean doCheckRate = doAvailability && false;
+            boolean doCheckRate = true;
             boolean doConfirmation = doAvailability && true;
             boolean doBookingList = false;
             boolean doBookingDetail = doBookingList && true;
@@ -222,7 +223,7 @@ public class HotelAPIClientDemo {
                             }
                             log.info("Confirming reservation with rate {}", rateKey);
                             BookingBuilder bookingBuilder =
-                                Booking.builder().withHolder("Rosetta", "Pruebas").clientReference("SDK Test").remark("***SDK***TESTING").tolerance("5.00")
+                                Booking.builder().withHolder("Rosetta", "Pruebas").clientReference("SDK Test").remark("***SDK***TESTING").tolerance(new BigDecimal(5))
                                     .addRoom(rateKey, confirmRoom).withVoucher("ENG", "xxxxx@xxxxxxx.com", "xxxxx@xxxxxxx.com", "Test", "Test");
                             //                            bookingBuilder.cardHolderName("AUTHORISED").cardNumber("4444333322221111").cardCVC("597").cardType("VI")
                             //                                    .expiryDate("0718").email("xxxxx@xxxxxx.com").phoneNumber("666666666");

@@ -22,6 +22,7 @@ package com.hotelbeds.distribution.hotel_api_sdk.helpers;
  * #L%
  */
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -75,6 +76,7 @@ public class Booking {
     private Integer platform;
     private VoucherEmail voucherEmail;
     private String voucherLanguage;
+    private BigDecimal tolerance;
 
     @Singular
     private List<ConfirmRoom> rooms;
