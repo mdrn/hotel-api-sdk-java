@@ -95,7 +95,7 @@ public final class SimpleTypes {
     /**
      * The Enum ChangeMode.
      *
-     * @author
+     * @author vmavromatis
      */
     @XmlType(name = "ChangeMode")
     @XmlEnum
@@ -123,7 +123,7 @@ public final class SimpleTypes {
     /**
      * The Enum YesNo.
      *
-     * @author
+     * @author vmavromatis
      */
     @XmlType(name = "YesNo")
     @XmlEnum
@@ -226,7 +226,7 @@ public final class SimpleTypes {
     /**
      * The Enum ShowDirectPayment.
      *
-     * @author
+     * @author vmavromatis
      */
     public enum ShowDirectPayment {
         //liberate
@@ -291,7 +291,7 @@ public final class SimpleTypes {
     /**
      * The Enum SiNo.
      *
-     * @author
+     * @author vmavromatis
      */
     public enum SiNo {
         S(SI, YesNo.Y),
@@ -363,7 +363,7 @@ public final class SimpleTypes {
     /**
      * The Enum HotelbedsCustomerType.
      *
-     * @author
+     * @author vmavromatis
      */
     public enum HotelbedsCustomerType {
         /**
@@ -488,7 +488,7 @@ public final class SimpleTypes {
     /**
      * The Enum HotelbedsTicketClass.
      *
-     * @author
+     * @author vmavromatis
      */
     public enum HotelbedsTicketClass {
         T,
@@ -498,7 +498,7 @@ public final class SimpleTypes {
     /**
      * The Enum RateType.
      *
-     * @author
+     * @author vmavromatis
      */
     public enum RateType {
         BOOKABLE,
@@ -508,7 +508,7 @@ public final class SimpleTypes {
     /**
      * The Enum CommissionType.
      *
-     * @author
+     * @author vmavromatis
      */
     public enum CommissionType {
         LIBERATE_RATE("L"),
@@ -554,7 +554,7 @@ public final class SimpleTypes {
     /**
      * The Enum PaymentType.
      *
-     * @author
+     * @author vmavromatis
      */
     public enum PaymentType {
         AT_HOTEL("P", "H"),
@@ -621,7 +621,7 @@ public final class SimpleTypes {
     /**
      * The Enum SupplementType.
      *
-     * @author
+     * @author vmavromatis
      */
     public enum SupplementType {
         SUPPLEMENT("S"),
@@ -663,7 +663,7 @@ public final class SimpleTypes {
     /**
      * The Enum TypeRequestAvail.
      *
-     * @author
+     * @author vmavromatis
      */
     public enum TypeRequestAvail {
         TYPE_REQUEST_VALUATION_AVAIL,
@@ -673,7 +673,7 @@ public final class SimpleTypes {
     /**
      * The Enum ProviderAvail.
      *
-     * @author
+     * @author vmavromatis
      */
     public enum ProviderAvail {
         ACE,
@@ -683,7 +683,7 @@ public final class SimpleTypes {
     /**
      * The Enum CancellationFlags.
      *
-     * @author
+     * @author vmavromatis
      */
     public enum CancellationFlags {
         CANCELLATION("C"),
@@ -721,7 +721,7 @@ public final class SimpleTypes {
     /**
      * The Enum BookingListFilterType.
      *
-     * @author
+     * @author vmavromatis
      */
     public enum BookingListFilterType {
         //E: busca por fechas de Entrada (Checking)
@@ -765,7 +765,7 @@ public final class SimpleTypes {
     /**
      * The Enum BookingListFilterStatus.
      *
-     * @author
+     * @author vmavromatis
      */
     public enum BookingListFilterStatus {
         CONFIRMED("N"),
@@ -854,7 +854,7 @@ public final class SimpleTypes {
     /**
      * The Enum HotelCodeType.
      *
-     * @author
+     * @author vmavromatis
      */
     public enum HotelCodeType {
         HOTELBEDS,
@@ -864,7 +864,7 @@ public final class SimpleTypes {
     /**
      * The Enum ChannelType.
      *
-     * @author
+     * @author vmavromatis
      */
     public enum ChannelType {
         B2B,
@@ -876,7 +876,7 @@ public final class SimpleTypes {
     /**
      * The Enum DeviceType.
      *
-     * @author
+     * @author vmavromatis
      */
     public enum DeviceType {
         MOBILE,
@@ -887,7 +887,7 @@ public final class SimpleTypes {
     /**
      * The Enum ReviewsType.
      *
-     * @author
+     * @author vmavromatis
      */
     public enum ReviewsType {
         TRIPADVISOR("TRIPADVISOR"),
@@ -927,7 +927,7 @@ public final class SimpleTypes {
     /**
      * The Enum AvailabilitySorter.
      *
-     * @author
+     * @author vmavromatis
      */
     public enum AvailabilitySorter {
         RATE("P"),
@@ -951,7 +951,7 @@ public final class SimpleTypes {
     /**
      * The Enum TaxType.
      *
-     * @author
+     * @author vmavromatis
      */
     public enum TaxType {
         TAX("T"),
@@ -993,7 +993,7 @@ public final class SimpleTypes {
     /**
      * The Enum HotelPackage.
      *
-     * @author
+     * @author vmavromatis
      */
     public enum HotelPackage {
         YES,
@@ -1004,7 +1004,7 @@ public final class SimpleTypes {
     /**
      * The Enum ShoppingCartStatus.
      *
-     * @author
+     * @author vmavromatis
      */
     public enum ShoppingCartStatus {
         NEW(INTERNAL_STATUS_NEW),
@@ -1051,7 +1051,7 @@ public final class SimpleTypes {
     /**
      * The Enum PriceFilterType.
      *
-     * @author
+     * @author vmavromatis
      */
     public enum PriceFilterType {
         TOTAL("Total"),

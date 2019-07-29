@@ -40,8 +40,6 @@ import java.time.LocalDate;
 
 /**
  *
- * Local copy of {@link com.hotelbeds.hotelapi.hotelapirest.engine.esb.availability.converter.DateDeserializer}
- *
  * Created by joroldan
  */
 public class DateDeserializer extends JsonDeserializer<LocalDate> {
