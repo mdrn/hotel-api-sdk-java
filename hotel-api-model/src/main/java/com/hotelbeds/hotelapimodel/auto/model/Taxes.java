@@ -47,9 +47,9 @@ import lombok.Data;
 @Data
 public class Taxes {
 
-    @XmlElementWrapper(name = "tax")
-    @XmlElement(name = "tax")
-    @JsonProperty("tax")
+    @XmlElementWrapper(name = "taxes")
+    @XmlElement(name = "taxes")
+    @JsonProperty("taxes")
     private List<Tax> taxes;
     @XmlAttribute
     private Boolean allIncluded;
