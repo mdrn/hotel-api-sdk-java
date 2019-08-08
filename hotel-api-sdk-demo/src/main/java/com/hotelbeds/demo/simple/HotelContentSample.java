@@ -65,7 +65,7 @@ public class HotelContentSample {
             }
             log.info("Hotels Done!!");
 
-            Hotel hotel = apiClient.getHotel(1234, "ENG", false);
+            Hotel hotel = apiClient.getHotels(Arrays.asList(1234), "ENG", false).get(0);
             log.debug("hotel: {}", hotel);
             log.info("Hotel Done!!");
 
