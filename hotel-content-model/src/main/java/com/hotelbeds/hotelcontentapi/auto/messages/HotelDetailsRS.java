@@ -44,7 +44,7 @@ import lombok.EqualsAndHashCode;
 @EqualsAndHashCode(callSuper = false)
 public class HotelDetailsRS extends AbstractGenericContentResponse {
 
-    private Hotel hotel;
+    private List<Hotel> hotels;
 
 
 }
