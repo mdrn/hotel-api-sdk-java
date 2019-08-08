@@ -81,6 +81,7 @@ import com.hotelbeds.hotelcontentapi.auto.messages.GroupCategory;
 import com.hotelbeds.hotelcontentapi.auto.messages.Hotel;
 import com.hotelbeds.hotelcontentapi.auto.messages.HotelDetailsRQ;
 import com.hotelbeds.hotelcontentapi.auto.messages.HotelDetailsRS;
+import com.hotelbeds.hotelcontentapi.auto.messages.HotelsRS;
 import com.hotelbeds.hotelcontentapi.auto.messages.ImageType;
 import com.hotelbeds.hotelcontentapi.auto.messages.Issue;
 import com.hotelbeds.hotelcontentapi.auto.messages.Language;
