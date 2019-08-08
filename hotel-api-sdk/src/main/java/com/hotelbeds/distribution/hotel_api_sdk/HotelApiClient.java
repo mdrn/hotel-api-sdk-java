@@ -647,14 +647,15 @@ public class HotelApiClient implements AutoCloseable {
     }
 
 
-    public Hotel getHotel(final int code, final String language, final boolean useSecondaryLanguage) throws HotelApiSDKException {
+    public Hotel getHotel(final List<Integer> codes, final String language, final boolean useSecondaryLanguage) throws HotelApiSDKException {
         HotelDetailsRQ request = new HotelDetailsRQ();
         request.setLanguage(language);
         request.setUseSecondaryLanguage(useSecondaryLanguage);
         request.setFields(new String[] {"all"});
         final Map<String, String> params = new HashMap<>();
         ContentType.HOTEL_DETAIL.addCommonParameters(request, params);
-        params.put("code", Integer.toString(code));
+        final String codeString = codes.toString().substring(1,codes.toString().length()-1).replaceAll("\\s+", "");
+        params.put("code", codeString);
         HotelDetailsRS hotelDetailRS = (HotelDetailsRS) callRemoteContentAPI(request, params, ContentType.HOTEL_DETAIL);
         if (hotelDetailRS.getHotel() != null) {
             return hotelDetailRS.getHotel();
