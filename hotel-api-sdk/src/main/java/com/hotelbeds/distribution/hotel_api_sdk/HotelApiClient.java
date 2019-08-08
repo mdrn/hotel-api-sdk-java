@@ -657,10 +657,10 @@ public class HotelApiClient implements AutoCloseable {
         final String codeString = codes.toString().substring(1,codes.toString().length()-1).replaceAll("\\s+", "");
         params.put("code", codeString);
         HotelDetailsRS hotelDetailRS = (HotelDetailsRS) callRemoteContentAPI(request, params, ContentType.HOTEL_DETAIL);
-        if (hotelDetailRS.getHotel() != null) {
-            return hotelDetailRS.getHotel();
+        if (hotelDetailRS.getHotels() != null) {
+            return hotelDetailRS.getHotels();
         } else {
-            throw new HotelApiSDKException(new HotelbedsError("Hotel not found", Integer.toString(code)));
+            throw new HotelApiSDKException(new HotelbedsError("Hotel(s) not found", codeString));
         }
     }
 
