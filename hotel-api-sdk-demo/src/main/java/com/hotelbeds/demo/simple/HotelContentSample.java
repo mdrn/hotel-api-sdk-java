@@ -46,6 +46,7 @@ import com.hotelbeds.hotelcontentapi.auto.messages.RateComments;
 import com.hotelbeds.hotelcontentapi.auto.messages.Room;
 import com.hotelbeds.hotelcontentapi.auto.messages.Segment;
 import com.hotelbeds.hotelcontentapi.auto.messages.Terminal;
+import java.util.Arrays;
 
 import lombok.extern.slf4j.Slf4j;
 
