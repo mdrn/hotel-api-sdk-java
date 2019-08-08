@@ -68,10 +68,13 @@ public class Hotel {
     private Content name;
     private Content description;
     private String countryCode;
+    @JsonProperty("country")
     private Country country;
+    @JsonProperty("state")
     private State state;
     private String destinationCode;
     private Short zoneCode;
+    @JsonProperty("destination")
     private Destination destination;
     private Zone zone;
     private GeoLocation coordinates;
