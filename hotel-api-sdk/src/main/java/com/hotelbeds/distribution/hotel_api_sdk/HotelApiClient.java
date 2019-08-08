@@ -659,6 +659,8 @@ public class HotelApiClient implements AutoCloseable {
         HotelDetailsRS hotelDetailRS = (HotelDetailsRS) callRemoteContentAPI(request, params, ContentType.HOTEL_DETAIL);
         if (hotelDetailRS.getHotels() != null) {
             return hotelDetailRS.getHotels();
+        } else if (hotelDetailRS.getHotel() != null) {
+            return Arrays.asList(hotelDetailRS.getHotel());
         } else {
             throw new HotelApiSDKException(new HotelbedsError("Hotel(s) not found", codeString));
         }
