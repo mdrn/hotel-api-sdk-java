@@ -660,7 +660,7 @@ public class HotelApiClient implements AutoCloseable {
         if (hotelDetailRS.getHotels() != null) {
             return hotelDetailRS.getHotels();
         } else {
-            throw new HotelApiSDKException(new HotelbedsError("Hotel not found", Integer.toString(code)));
+            throw new HotelApiSDKException(new HotelbedsError("Hotel(s) not found", codeString));
         }
     }
 
