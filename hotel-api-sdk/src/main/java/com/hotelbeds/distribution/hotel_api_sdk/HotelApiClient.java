@@ -647,7 +647,7 @@ public class HotelApiClient implements AutoCloseable {
     }
 
 
-    public Hotel getHotel(final List<Integer> codes, final String language, final boolean useSecondaryLanguage) throws HotelApiSDKException {
+    public List<Hotel> getHotels(final List<Integer> codes, final String language, final boolean useSecondaryLanguage) throws HotelApiSDKException {
         HotelDetailsRQ request = new HotelDetailsRQ();
         request.setLanguage(language);
         request.setUseSecondaryLanguage(useSecondaryLanguage);
