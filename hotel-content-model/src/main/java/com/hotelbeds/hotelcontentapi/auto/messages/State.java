@@ -43,9 +43,7 @@ import lombok.Data;
 @Data
 public class State {
 
-    @JsonProperty("code")
     private String code;
-    @JsonProperty("name")
     private String name;
 
 }
