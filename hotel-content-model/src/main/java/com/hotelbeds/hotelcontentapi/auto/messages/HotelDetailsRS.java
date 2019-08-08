@@ -31,6 +31,7 @@ package com.hotelbeds.hotelcontentapi.auto.messages;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.hotelbeds.hotelcontentapi.auto.messages.Hotel;
+import java.util.List;
 
 import lombok.ToString;
 import lombok.NoArgsConstructor;
