@@ -47,7 +47,7 @@ public enum HotelContentPaths {
         "lastUpdateTime")),
     TYPES_URL(ConstantHolder.BASIC_TYPE_PATH, AbstractGenericContentResponse.class, Arrays.asList("from", "to", "lastUpdateTime")),
     RATECOMMENT_DETAIL_URL(ConstantHolder.BASIC_TYPE_PATH, RateCommentDetailsRS.class, Arrays.asList("date", "code")),
-    HOTEL_DETAIL_URL(ConstantHolder.BASIC_HOTELDETAILS_PATH, HotelsRS.class),
+    HOTEL_DETAIL_URL(ConstantHolder.BASIC_HOTELDETAILS_PATH, HotelDetailsRS.class),
     HOTELS_URL(ConstantHolder.HOTELS_PATH, HotelsRS.class, Arrays.asList("countryCode", "destinationCode", "codes", "from", "to", "lastUpdateTime"));
 
     private final String urlTemplate;
