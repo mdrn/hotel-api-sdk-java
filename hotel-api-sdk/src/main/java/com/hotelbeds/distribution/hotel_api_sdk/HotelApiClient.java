@@ -672,7 +672,7 @@ public class HotelApiClient implements AutoCloseable {
         }
     }
 
-	private List<Hotel> hotelDetails (HotelDetailsRQ request, Map<String, String> params, String codeString) {
+	private List<Hotel> hotelDetails (HotelDetailsRQ request, Map<String, String> params, String codeString) throws HotelApiSDKException {
         params.put("code", codeString);
         HotelDetailsRS hotelDetailRS = (HotelDetailsRS) callRemoteContentAPI(request, params, ContentType.HOTEL_DETAIL);
         if (hotelDetailRS.getHotels() != null) {
