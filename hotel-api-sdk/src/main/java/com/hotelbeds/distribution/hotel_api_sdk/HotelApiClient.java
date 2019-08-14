@@ -664,8 +664,8 @@ public class HotelApiClient implements AutoCloseable {
             codeGroups.add(codes);
             codes.clear();
             
-            final List<String> codeString = codeGroups.stream().map(codeList -> codeList.toString().substring(1,codeList.toString().length()-1).replaceAll("\\s+", "")).collect(Collectors.toList());
-            return codeString.parallelStream().flatMap(cs -> hotelDetails(request,params,cs).stream()).collect(Collectors.toList());
+            final List<String> codeString = codeGroups.stream().map(codeList -> codeList.toString().substring(1,codeList.toString().length()-1).replaceAll("\\s+", ""));
+            return codeString.parallelStream().flatMap(cs -> hotelDetails(request,params,cs)).collect(Collectors.toList());
         } else {
             final String codeString = codes.toString().substring(1,codes.toString().length()-1).replaceAll("\\s+", "");
             return hotelDetails (request, params, codeString);
