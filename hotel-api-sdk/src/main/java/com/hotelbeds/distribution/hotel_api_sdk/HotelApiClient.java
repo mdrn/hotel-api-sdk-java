@@ -654,7 +654,26 @@ public class HotelApiClient implements AutoCloseable {
         request.setFields(new String[] {"all"});
         final Map<String, String> params = new HashMap<>();
         ContentType.HOTEL_DETAIL.addCommonParameters(request, params);
-        final String codeString = codes.toString().substring(1,codes.toString().length()-1).replaceAll("\\s+", "");
+        if (codes.size() > 200){
+        	
+        	List<List<Integer>> codeGroups = null;
+            while (codes.size() > 200){
+            	codeGroups.add(codes.subList(0, 200));
+            	codes.subList(0, 200).clear();
+            }
+            codeGroups.add(codes);
+            codes.clear();
+            
+            final List<String> codeString = codeGroups.stream().map(codeList -> codeList.toString().substring(1,codeList.toString().length()-1).replaceAll("\\s+", ""));
+            return hotelscodeString.parallelStream().flatMap(cs -> hotelDetails(request,params,cs)).collect(Collectors.toList())
+            }
+        } else {
+            final String codeString = codes.toString().substring(1,codes.toString().length()-1).replaceAll("\\s+", "");
+            return hotelDetails (request, params, codeString);
+        }
+    }
+
+	private List<Hotel> hotelDetails (HotelDetailsRQ request, Map<String, String> params, String codeString) {
         params.put("code", codeString);
         HotelDetailsRS hotelDetailRS = (HotelDetailsRS) callRemoteContentAPI(request, params, ContentType.HOTEL_DETAIL);
         if (hotelDetailRS.getHotels() != null) {
@@ -664,7 +683,7 @@ public class HotelApiClient implements AutoCloseable {
         } else {
             throw new HotelApiSDKException(new HotelbedsError("Hotel(s) not found", codeString));
         }
-    }
+	}
 
     public List<Destination> getAllDestinations(final String language, final boolean useSecondaryLanguage) throws HotelApiSDKException {
         return getAllElements(language, useSecondaryLanguage, ContentType.DESTINATION);
@@ -713,6 +732,16 @@ public class HotelApiClient implements AutoCloseable {
 
     public Stream<Hotel> hotelsStream(final String language, final boolean useSecondaryLanguage, String... fields) throws HotelApiSDKException {
         return getStreamOf(language, useSecondaryLanguage, ContentType.HOTEL, fields);
+    }
+
+    public Stream<Hotel> hotelDetailsStream(final String language, final boolean useSecondaryLanguage, String... fields) throws HotelApiSDKException {
+        throws HotelApiSDKException {
+        try {
+            return StreamSupport.stream(
+                new ContentElementSpliterator<T>(this, ContentType.HOTEL_DETAIL, generateHotelDetailsFullRequest(language, useSecondaryLanguage, ContentType.HOTEL_DETAIL, fields)), false);
+        } catch (InstantiationException | IllegalAccessException e) {
+            throw new HotelApiSDKException(new HotelbedsError("SDK Configuration error", e.getCause().getMessage()));
+        }
     }
 
     ////////////////
