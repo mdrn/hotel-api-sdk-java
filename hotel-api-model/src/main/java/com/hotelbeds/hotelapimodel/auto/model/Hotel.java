@@ -89,7 +89,7 @@ public class Hotel {
     @XmlAttribute
     private String destinationName;
     @XmlAttribute
-    private String exclusiveDeal;
+    private Integer exclusiveDeal;
     @XmlAttribute
     private Short zoneCode;
     @XmlAttribute
