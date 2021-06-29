@@ -9,9 +9,7 @@ in the development of Java applications that use [APItude Booking](https://devel
 See [Release notes.md](https://github.com/hotelbeds-sdk/hotel-api-sdk-java/blob/master/RELEASE_NOTES.md)
 
 ## JavaDocs
-* [HotelAPI Model 0.13 Javadocs](http://hotelbeds-sdk.github.io/hotel-api-sdk-java/hotel-api-model/0.13/)
-* [HotelAPI SDK 0.13 Javadocs](http://hotelbeds-sdk.github.io/hotel-api-sdk-java/hotel-api-sdk/0.13/)
-* [HotelContent Model 0.13 Javadocs](http://hotelbeds-sdk.github.io/hotel-api-sdk-java/hotel-content-model/0.13/)
+http://hotelbeds-sdk.github.io/hotel-api-sdk-java/
 
 
 ## License
