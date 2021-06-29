@@ -96,9 +96,11 @@ public class Rate extends BasicRate {
     private String childrenAges;
     @XmlElementWrapper(name = "promotions")
     @XmlElement(name = "promotion")
+    @JsonProperty("promotions")
     private List<Promotion> promotions;
     @XmlElementWrapper(name = "offers")
     @XmlElement(name = "offer")
+    @JsonProperty("offers")
     private List<Offer> offers;
     @XmlElementWrapper(name = "shifts")
     @XmlElement(name = "shiftRate")
